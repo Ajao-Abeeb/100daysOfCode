@@ -3,7 +3,7 @@ import random
 import string
 import sys
 print("\n\033[34m Password Generator 🔒🔒🔒")
-a =input("\n\033[33m Did you want to generate password: Automatic or Manually\n")
+a =input("\n\033[32m Did you want to generate password: Automatic or Manually\n")
 
 def generator():
     if a == 'Automatic' :
@@ -34,7 +34,7 @@ def generator():
             pwd +=''.join(random.choices(password))
         print(pwd)
     else:
-       print('choose between')
+        sys.exit
     still_guessing = 'yes'
     print("Did you want to generate another password: yes or no")
     b = input()
@@ -42,8 +42,12 @@ def generator():
            generator()
            break    
     else:
-        print("Thanks fors generating")
+        print("Thanks for generating")
         sys.exit
-generator()      
-file = open("Password Save.txt" , 'w') 
-file.write(str(pwd))
+generator() 
+try:     
+   file = open("Password Save.txt" , 'w') 
+   file.write(str(pwd))
+   file.close()
+except NameError:
+    print('Password is not going to save in Password save.txt')
