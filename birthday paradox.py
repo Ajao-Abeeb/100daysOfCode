@@ -28,3 +28,4 @@ def birthdayParadox(num_people):
     print(int(prob))
 
 birthdayParadox(234)
+
