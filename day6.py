@@ -49,5 +49,6 @@ try:
    file = open("Password Save.txt" , 'w') 
    file.write(str(pwd))
    file.close()
-except NameError:
+except NameError as v:
+    v = "No password is save"
     print('Password is not going to save in Password save.txt')
