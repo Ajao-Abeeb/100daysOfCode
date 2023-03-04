@@ -52,3 +52,8 @@ try:
 except NameError as v:
     v = "No password is save"
     print('Password is not going to save in Password save.txt')
+#The code is a password generator. It generates a password for you. You can choose to generate a password automatically or manually.
+#If you choose to generate a password automatically, the program will generate a random password for you.
+#If you choose to generate a password manually, the program will ask you to input your name and year of birth and then it will generate a password for you.
+#The program will also save the generated password in a file called Password Save.txt.
+#"""
